@@ -1,9 +1,9 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: public
 
 website:
-  title: "Piney Data"
+  title: Piney Data
   favicon: img/favicon.ico
   site-url: https://www.pineydata.com
   google-analytics: "G-W0BCPGTRZ6"
