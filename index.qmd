@@ -4,6 +4,7 @@ format:
         fontcolor: white;
 ---
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Piney Data is the home of evergreen analytics that will establish you on your path to leveraging your data.">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 <style>
@@ -34,7 +35,7 @@ format:
 </style>
 
 
-![](/img/pineydata.png){width=50% fig-align="left"}
+![](/img/pineydata.png){width=50% fig-align="left" alt="Piney Data"}
 
 Welcome to Piney Data, where we help non-profit organizations and small to medium-sized businesses grow their data and analytics know-how.  We focus on getting you started and leverage evergreen analytics to achieve your goals. 
 
