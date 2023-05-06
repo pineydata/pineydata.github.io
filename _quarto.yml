@@ -3,7 +3,7 @@ project:
   output-dir: public
 
 website:
-  title: Piney Data | The Home of Evergreen Analytics
+  title: Piney Data | Your Source For Evergreen Analytics
   favicon: img/favicon.ico
   site-url: https://www.pineydata.com
   google-analytics: "G-W0BCPGTRZ6"
