@@ -6,6 +6,9 @@
 venv/
 .env/
 
+# Do not ignore the CNAME file
+!content/extra/CNAME
+
 __pycache__/
 *.py[cod]
 
