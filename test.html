@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Piney Data is a data analytics freelance agency.  We practice evergreen analytics which focuses on building solution with lasting meaningful impact." />
+    <meta name="author" content="" />
+    <title>Piney Data | Your Souce For Evergreen Analytics</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-weight: 300;
+            src: url(/fonts/Rubik-Light.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-style: italic;
+            font-weight: 300;
+            src: url(/fonts/Rubik-LightItalic.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-weight: 400;
+            src: url(/fonts/Rubik-Regular.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-style: italic;
+            font-weight: 400;
+            src: url(/fonts/Rubik-Italic.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-weight: 500;
+            src: url(/fonts/Rubik-Medium.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-style: italic;
+            font-weight: 500;
+            src: url(/fonts/Rubik-MediumItalic.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-weight: 600;
+            src: url(/fonts/Rubik-Medium.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-weight: 600;
+            src: url(/fonts/Rubik-SemiBold.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-style: italic;
+            font-weight: 600;
+            src: url(/fonts/Rubik-SemiBoldItalic.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-weight: 700;
+            src: url(/fonts/Rubik-Bold.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-style: italic;
+            font-weight: 700;
+            src: url(/fonts/Rubik-BoldItalic.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-weight: 800;
+            src: url(/fonts/Rubik-ExtraBold.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-style: italic;
+            font-weight: 800;
+            src: url(/fonts/Rubik-ExtraBoldItalic.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-weight: 900;
+            src: url(/fonts/Rubik-Black.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik;
+            font-style: italic;
+            font-weight: 900;
+            src: url(/fonts/Rubik-BlackItalic.woff2)format("woff2")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik vf;
+            font-weight: 100 1000;
+            src: url(/fonts/Rubik-VF.woff2)format("woff2 supports variations"), url(/fonts/Rubik-VF.woff2)format("woff2-variations")
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: rubik vf;
+            font-style: italic;
+            font-weight: 100 1000;
+            src: url(/fonts/Rubik-Italic-VF.woff2)format("woff2 supports variations"), url(/fonts/Rubik-Italic-VF.woff2)format("woff2-variations")
+        }
+
+        html {
+            font-family: rubik, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
+            line-height: 1.5;
+            --neutral-100: hsl(200, 20%, 20%);
+            --neutral-300: hsl(200, 6%, 45%);
+            --text-color: var(--neutral-100);
+            --text-color-light: var(--neutral-300);
+            --text-color-inverted: #ffffff;
+            --grey-border: hsl(200, 5%, 85%);
+            --grey-background: hsl(200, 5%, 92%);
+            --grey-hover: hsl(200, 10%, 97%);
+            --input-border-color: hsl(200, 5%, 75%);
+            --blue: hsl(200, 73%, 70%);
+            --blue-500: hsl(200, 95%, 70%);
+            --blue-400: hsl(200, 95%, 55%);
+            --blue-300: hsl(200, 100%, 40%);
+            --blue-200: hsl(200, 100%, 35%);
+            --blue-100: hsl(200, 100%, 25%);
+            --blue-saturated-light: var(--blue-500);
+            --blue-saturated-light-dark: var(--blue-400);
+            --blue-saturated: var(--blue-200);
+            --blue-saturated-dark: var(--blue-100);
+            --button-color: var(--blue-300);
+            --button-color-hover: var(--blue-200);
+            --focus-outline-color: hsla(200, 73%, 70%, 75%);
+            --focus-outline-color--danger: hsla(0, 73%, 70%, 75%);
+            --strong-weight: 475;
+            color: var(--text-color);
+            font-size: 100%;
+            box-sizing: border-box
+        }
+
+        * {
+            box-sizing: inherit
+        }
+
+        @supports(font-variation-settings:normal) {
+            html {
+                font-family: rubik vf, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif
+            }
+        }
+
+        @media only screen and (min-width:700px) {
+            .mobile-only {
+                display: none !important
+            }
+        }
+
+        @media only screen and (max-width:700px) {
+            .no-mobile {
+                display: none !important
+            }
+        }
+
+        .sr-only {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden
+        }
+
+        a,
+        a:visited,
+        a:hover {
+            font-weight: var(--strong-weight);
+            text-decoration: none
+        }
+
+        a,
+        a:visited {
+            color: var(--blue-saturated)
+        }
+
+        a:hover {
+            color: var(--blue-saturated-dark)
+        }
+
+        .link--email {
+            font-family: inconsolata, consolas, Menlo, Monaco, monospace;
+            display: inline-flex;
+            flex-direction: row;
+            font-size: inherit
+        }
+
+        .link__icon {
+            margin: 0 .25rem
+        }
+
+        html {
+            --level-n1: 0.89rem;
+            --base: 1rem;
+            --level-1: 1.25rem;
+            --level-2: 1.5rem;
+            --level-3: 1.8rem;
+            --level-4: 2rem;
+            --level-5: 2.4rem
+        }
+
+        h1,
+        .h1 {
+            font-size: var(--level-5);
+            font-weight: 400;
+            letter-spacing: -.03em;
+            margin: 0 0 .75rem;
+            line-height: 1
+        }
+
+        h2,
+        .h2 {
+            font-size: var(--level-3);
+            font-weight: 300;
+            letter-spacing: -.02em;
+            margin: 2rem 0 .75rem
+        }
+
+        h3,
+        .h3 {
+            font-size: var(--level-2);
+            font-weight: 325;
+            letter-spacing: -.02em;
+            margin: 1.5rem 0 .75rem
+        }
+
+        h4,
+        .h4 {
+            font-size: var(--level-1);
+            font-weight: 350;
+            margin: 1.5rem 0 .75rem;
+            letter-spacing: -.02em
+        }
+
+        h5,
+        .h5 {
+            font-size: var(--base);
+            font-weight: var(--strong-weight);
+            margin: 1.5rem 0 0;
+            letter-spacing: 0
+        }
+
+        .subtitle {
+            margin: .75rem 0
+        }
+
+        @media only screen and (max-width:700px) {
+            h1 {
+                font-size: var(--level-4)
+            }
+
+            h2 {
+                font-size: var(--level-2)
+            }
+
+            h3 {
+                font-size: var(--level-1)
+            }
+
+            h4 {
+                font-size: var(--base)
+            }
+        }
+
+        small {
+            font-size: var(--level-n1)
+        }
+
+        p {
+            margin: 0 0 1.5rem
+        }
+
+        strong {
+            font-weight: var(--strong-weight)
+        }
+
+        th {
+            font-weight: var(--strong-weight);
+            text-align: left
+        }
+
+        ul,
+        ol,
+        dl {
+            margin: 0 0 1.5rem;
+            padding-left: 0
+        }
+
+        dt,
+        dd {
+            margin: 0;
+            padding: 0
+        }
+
+        code,
+        pre,
+        kbd {
+            font-family: inconsolata, consolas, Menlo, Monaco, monospace;
+            font-size: var(--level-n1)
+        }
+
+        kbd {
+            background-color: var(--grey-background);
+            padding: .25rem;
+            border-radius: .25rem;
+            border: 1px solid var(--grey-border)
+        }
+
+        @media only screen and (max-width:700px) {
+            ul {
+                padding-left: 1rem
+            }
+
+            ol {
+                padding-left: 1.5rem
+            }
+        }
+
+        @counter-style decimal-leading-zero-no-period {
+            system: extends decimal-leading-zero;
+            suffix: "  ";
+        }
+
+        ol {
+            list-style-type: decimal-leading-zero-no-period
+        }
+
+        li {
+            margin: 0 0 .5rem
+        }
+
+        li::marker {
+            color: var(--blue-saturated)
+        }
+
+        .content {
+            width: 40rem;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 3rem .75rem
+        }
+
+        @media only screen and (max-width:700px) {
+            .content {
+                margin: .75rem auto;
+                padding: 1.5rem .75rem
+            }
+        }
+
+        .figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 0 1.5rem
+        }
+
+        .hint {
+            color: var(--text-color-light);
+            margin: 0 0 .75rem
+        }
+
+        .hint>strong {
+            color: var(--text-color)
+        }
+
+        .header {
+            padding: .375rem 2vw;
+            border-bottom: 1px solid var(--grey-border)
+        }
+
+        .header--home {
+            border-bottom: none;
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        .header__inner {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-width: 75rem;
+            margin: 0 auto;
+            justify-content: space-between
+        }
+
+        .header__inner--home {
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center
+        }
+
+        .logo__rose {
+            margin-right: .5rem;
+            width: 6rem;
+            height: 6rem
+        }
+
+        .logo__text {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -.03em;
+            margin: 0;
+            padding: 0
+        }
+
+        .logo__text a,
+        .logo__text a:visited,
+        .logo__text a:hover {
+            color: inherit;
+            text-decoration: inherit;
+            font-weight: inherit
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        .rose {
+            animation: .24s ease-out 0s 1 fadeIn
+        }
+
+        .rose--medium {
+            max-width: 24rem
+        }
+
+        .rose path {
+            transition: fill 1s ease-out, opacity 200ms ease
+        }
+
+        .logo--home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem .5rem;
+            border-bottom: 1px solid var(--grey-border)
+        }
+
+        .logo--home .logo__rose {
+            width: 18rem;
+            height: 18rem;
+            margin: 0 0 .5rem
+        }
+
+        .logo--home .logo__text {
+            font-size: 2.5rem;
+            line-height: 1.2
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            margin: 0 0 0 auto
+        }
+
+        .nav--home {
+            margin: 0 auto
+        }
+
+        .nav__links,
+        .mobile-nav__links {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 3rem 0 0
+        }
+
+        .nav__links {
+            margin: 0;
+            padding: 0;
+            flex-direction: row;
+            align-items: center
+        }
+
+        .nav__link {
+            margin: 1rem 1.5rem
+        }
+
+        .nav__link a {
+            font-weight: 400
+        }
+
+        .mobile-nav {
+            position: absolute;
+            opacity: 0;
+            z-index: -100;
+            transition: opacity 200ms ease;
+            font-size: 1.5rem;
+            padding: 1rem
+        }
+
+        .mobile-nav--active {
+            background-color: #000;
+            z-index: 100;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 1
+        }
+
+        .mobile-nav__links {
+            visibility: hidden;
+            flex-direction: column
+        }
+
+        .mobile-nav--active .mobile-nav__links {
+            visibility: visible
+        }
+
+        .mobile-nav__link {
+            opacity: 0;
+            margin: 0;
+            transform: translateY(-2rem);
+            transition: opacity 200ms, transform 200ms
+        }
+
+        .mobile-nav--active .mobile-nav__link {
+            transform: translateY(0);
+            opacity: 1
+        }
+
+        .mobile-nav__link:nth-child(1) {
+            transition-delay: 0ms
+        }
+
+        .mobile-nav__link:nth-child(2) {
+            transition-delay: 50ms
+        }
+
+        .mobile-nav__link:nth-child(3) {
+            transition-delay: 100ms
+        }
+
+        .mobile-nav__link:nth-child(4) {
+            transition-delay: 150ms
+        }
+
+        .mobile-nav__link:nth-child(5) {
+            transition-delay: 200ms
+        }
+
+        .mobile-nav__link:nth-child(6) {
+            transition-delay: 250ms
+        }
+
+        .mobile-nav__link a {
+            display: block;
+            padding: 1rem
+        }
+
+        .mobile-nav__link a,
+        .mobile-nav__link a:visited {
+            color: var(--blue-saturated-light)
+        }
+
+        .mobile-nav__link a:hover {
+            color: var(--blue-saturated-light-dark)
+        }
+
+        .button--icon {
+            color: var(--text-color-light);
+            background-color: transparent;
+            font: inherit;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin: 0;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .button--close {
+            color: var(--grey-border);
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            z-index: 1000
+        }
+
+        @media only screen and (max-width:1600px) {
+            .logo__text {
+                font-size: 1.15rem
+            }
+
+            .logo__rose {
+                width: 4rem;
+                height: 4rem
+            }
+        }
+
+        @media only screen and (max-width:700px) {
+            .logo__text {
+                font-size: 1.15rem
+            }
+
+            .logo__rose {
+                width: 3rem;
+                height: 3rem
+            }
+
+            .nav--home {
+                width: 100%
+            }
+
+            .nav--home .nav__links {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                margin: .5rem 0;
+                justify-content: stretch
+            }
+
+            .nav--home .nav__link {
+                width: 100%;
+                padding: 0;
+                margin: 0
+            }
+
+            .nav--home .nav__link a {
+                text-align: center;
+                display: block;
+                padding: 1rem .5rem
+            }
+
+            .logo--home .logo__text {
+                font-size: 2rem;
+                margin: 0 0 1rem
+            }
+        }
+
+        @counter-style lower-alpha-with-parentheses {
+            system: fixed;
+            symbols: "(a)""(b)""(c)""(d)""(e)""(f)""(g)""(h)""(i)""(j)""(k)"
+                "(l)""(m)""(n)""(o)""(p)""(q)""(r)""(s)""(t)""(u)""(v)""(w)"
+                "(x)""(y)""(z)";
+            suffix: " ";
+        }
+
+        .terms ol ol {
+            list-style: lower-alpha;
+            list-style: lower-alpha-with-parentheses;
+            padding-left: 2rem
+        }
+
+        .terms li>p {
+            margin-bottom: .75rem
+        }
+
+        .terms ol {
+            margin: 0
+        }
+    </style>
+</head>
+
+<body>
+    <header class="content header--home">
+        <div class="logo logo--home">
+            <img class=logo__rose src="assets/img/piney.png" alt="Piney Data" width=200 height=200>
+            <h1 class=logo__text><a href= />Piney Data</a></h1>
+        </div>
+        <nav class="nav nav--home">
+            <ul class=nav__links>
+                <li class=nav__link><a href=/about/>About </a> </li>
+                <li class=nav__link><a href=/contact/>Contact Us</a> </li>
+                <li class=nav__link><a href=/jobs/>Apply </a> </li> 
+            </ul> 
+        </nav>
+    </header>
+</body>
+</html>

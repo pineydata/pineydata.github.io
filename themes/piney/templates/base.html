@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />
+</head>
+<body>
+    <nav>
+        <a href="{{ SITEURL }}/">Home</a>
+        <a href="{{ SITEURL }}/comingsoon.html">Services</a>
+        <a href="{{ SITEURL }}/comingsoon.html">About Us</a>
+        <a href="{{ SITEURL }}/comingsoon.html">Contact</a>
+    </nav>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {{ YEAR }} {{ SITENAME }}. All Rights Reserved.</p>
+        <a href="https://www.linkedin.com/company/pineydata" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </footer>
+</body>
+</html>

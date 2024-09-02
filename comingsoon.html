@@ -3,56 +3,79 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Piney Data | Your Souce For Evergreen Analytics</title>
+        <meta name="description" content="Piney Data - Coming Soon. Your source for Evergreen Analytics." />
+        <meta name="author" content="Piney Data" />
+        <title>Coming Soon | Piney Data</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#05A0B9',
+                            secondary: '#2C3E50',
+                        },
+                        fontFamily: {
+                            'sans': ['Open Sans', 'sans-serif'],
+                            'display': ['Raleway', 'sans-serif'],
+                        },
+                    }
+                }
+            }
+        </script>
     </head>
-    <body>
+    <body class="font-sans text-gray-800">
         <!-- Navigation-->
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-md bg-light">
-                <a class="navbar-brand" href="#!"><img src="assets/img/pineydata.png" width="80" height="50"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="comingsoon.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="comingsoon.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="comingsoon.html">Contact</a>
-                    </li>
-                    </ul>
+        <nav class="bg-white shadow-md fixed w-full z-10">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <a class="flex items-center" href="index.html">
+                        <img src="assets/img/piney.png" alt="Piney Data Logo" class="w-12 h-12 mr-3">
+                        <span class="font-display font-bold text-xl text-primary">Piney Data</span>
+                    </a>
+                    <div class="hidden md:flex space-x-6">
+                        <a class="text-gray-600 hover:text-primary transition duration-300" href="index.html#services">Services</a>
+                        <a class="text-gray-600 hover:text-primary transition duration-300" href="index.html#about">About Us</a>
+                        <a class="text-gray-600 hover:text-primary transition duration-300" href="index.html#contact">Contact</a>
+                    </div>
+                    <button class="lg:hidden" id="menu-toggle">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
+        
         <!-- Masthead-->
-        <header class="masthead">
-            <div class="container position-relative">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6">
-                        <div class="text-center text-white">
-                            <!-- Page heading-->
-                            <h1 class="display-1">Coming Soon...</h1>
-                        </div>
+        <header class="bg-gradient-to-r from-primary to-blue-600 text-white py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-6xl font-display font-bold mb-6 leading-tight">Coming Soon</h1>
+                <p class="text-2xl mb-10 max-w-2xl mx-auto">We're working hard to bring you something amazing. Stay tuned!</p>
+                <a href="index.html" class="bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">Back to Home</a>
+            </div>
+        </header>
+
+        <!-- Footer-->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-between items-center">
+                    <div class="w-full md:w-auto mb-4 md:mb-0">
+                        <p>&copy; Piney Data 2023. All Rights Reserved.</p>
+                    </div>
+                    <div class="w-full md:w-auto">
+                        <a href="https://www.linkedin.com/company/pineydata" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-gray-400 transition duration-300">
+                            <i class="bi-linkedin"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </header>
+        </footer>
+
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
     </body>
 </html>
