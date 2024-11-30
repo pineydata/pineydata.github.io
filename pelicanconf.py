@@ -28,7 +28,8 @@ DEFAULT_PAGINATION = False
 #RELATIVE_URLS = True
 
 THEME = 'themes/piney'
-STATIC_PATHS = ['images']
+THEME_STATIC_DIR = 'theme'
+THEME_STATIC_PATHS = ['static']
 
 TAILWIND_CSS = True
 THEME_COLOR_PRIMARY = '#05A0B9'
