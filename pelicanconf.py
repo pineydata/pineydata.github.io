@@ -1,4 +1,4 @@
-AUTHOR = 'Your Name'
+AUTHOR = 'Piney Data'
 SITENAME = 'Piney Data'
 SITEURL = ''
 
@@ -32,5 +32,9 @@ THEME_STATIC_DIR = 'theme'
 THEME_STATIC_PATHS = ['static']
 
 TAILWIND_CSS = True
-THEME_COLOR_PRIMARY = '#05A0B9'
-THEME_COLOR_SECONDARY = '#2C3E50'
+THEME_COLOR_PRIMARY = '#2fa1ba'
+THEME_COLOR_SECONDARY = '#009477'
+
+# Page settings
+PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}'
