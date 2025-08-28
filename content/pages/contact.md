@@ -15,10 +15,10 @@ If we're a good fit, we'll design a partnership that starts delivering value imm
 
 ## Get Started
 
-[Book a Free Conversation](https://calendly.com/pineydata/)
+[Book a Free Consult](https://calendly.com/pineydata/)
 
 ---
 
-**Email:** hello@pineydata.com
+**Email:** [hello@pineydata.com](mailto:hello@pineydata.com)
 
 **LinkedIn:** [Piney Data](https://www.linkedin.com/company/pineydata)

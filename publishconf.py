@@ -10,11 +10,10 @@ SITEURL = 'https://www.pineydata.com'
 RELATIVE_URLS = False
 
 # Ensure static paths are included
-STATIC_PATHS = ['images', 'extra/CNAME']
+STATIC_PATHS = ['images', 'extra']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
 }
-
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
@@ -22,13 +21,14 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
-
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
 
+# Theme settings
 THEME = 'themes/piney'
-STATIC_PATHS = ['images']
+THEME_STATIC_DIR = 'theme'
+THEME_STATIC_PATHS = ['static']
 
 TAILWIND_CSS = True
-THEME_COLOR_PRIMARY = '#05A0B9'
-THEME_COLOR_SECONDARY = '#2C3E50'
+THEME_COLOR_PRIMARY = '#009477'
+THEME_COLOR_SECONDARY = '#2fa1ba'
