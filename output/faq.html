@@ -87,29 +87,39 @@
         <nav class="bg-white shadow-xl w-full z-50 fixed top-0 left-0 right-0 border-b border-slate-100">
             <div class="container mx-auto px-4 py-4">
                 <div class="flex justify-between items-center">
-                    <a class="flex items-center group" href="https://www.pineydata.com/">
+                    <a class="flex items-center group" href="/">
                         <img src="/images/piney.png" alt="Piney Data Logo" class="w-12 h-12 mr-3 group-hover:scale-110 transition-transform duration-300">
                         <span class="font-display font-bold text-xl text-primary group-hover:text-secondary transition-colors duration-300">Piney Data</span>
                     </a>
                     <div class="hidden md:flex items-center space-x-12 ml-auto mr-8">
-                        <a href="https://www.pineydata.com/about" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">About</a>
-                        <a href="https://www.pineydata.com/partners" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">Partners</a>
-                        <a href="https://www.pineydata.com/faq" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">FAQ</a>
-                        <a href="https://www.pineydata.com/contact" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+                        <a href="/about" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">About</a>
+                        <a href="/partners" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">Partners</a>
+                        <a href="/faq" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">FAQ</a>
+                        <a href="/contact" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">Contact</a>
                     </div>
-                    <a href="https://calendly.com/pineydata/" target="_blank" rel="noopener noreferrer"
-                       class="hidden md:block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        Book a Free Consult
-                    </a>
+                    <div class="flex items-center space-x-4">
+                        <a href="https://calendly.com/pineydata/" target="_blank" rel="noopener noreferrer"
+                           class="hidden md:block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Book a Free Consult
+                        </a>
+                        <button class="md:hidden text-gray-600 hover:text-primary transition-colors duration-300" id="mobile-menu-button" aria-label="Menu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                <path class="close-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
             <!-- Mobile menu -->
-            <div class="md:hidden hidden bg-white border-t border-slate-100" id="mobile-menu">
-                <a class="block py-3 px-4 text-sm hover:bg-slate-50 transition-colors duration-200" href="https://www.pineydata.com/about">About</a>
-                <a class="block py-3 px-4 text-sm hover:bg-slate-50 transition-colors duration-200" href="https://www.pineydata.com/partners">Partners</a>
-                <a class="block py-3 px-4 text-sm hover:bg-slate-50 transition-colors duration-200" href="https://www.pineydata.com/faq">FAQ</a>
-                <a class="block py-3 px-4 text-sm hover:bg-slate-50 transition-colors duration-200" href="https://www.pineydata.com/contact">Contact</a>
-                <a class="block py-3 px-4 text-sm bg-primary text-white font-medium" href="https://calendly.com/pineydata/">Get Started</a>
+            <div class="hidden bg-white border-t border-slate-100" id="mobile-menu">
+                <div class="container mx-auto px-4 py-2 space-y-1">
+                    <a class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 rounded-lg" href="/about">About</a>
+                    <a class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 rounded-lg" href="/partners">Partners</a>
+                    <a class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 rounded-lg" href="/faq">FAQ</a>
+                    <a class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 rounded-lg" href="/contact">Contact</a>
+                    <a class="block py-3 px-4 text-white bg-primary hover:bg-primary/90 transition-colors duration-200 rounded-lg text-center mt-4" href="https://calendly.com/pineydata/">Book a Free Consult</a>
+                </div>
             </div>
         </nav>
 
@@ -359,19 +369,19 @@
                         <h3 class="font-display font-bold text-lg mb-4">Quick Links</h3>
                         <ul class="space-y-3">
                             <li>
-                                <a href="https://www.pineydata.com/about"
+                                <a href="/about"
                                    class="text-slate-300 hover:text-primary transition-colors duration-300">
                                     About
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.pineydata.com/partners"
+                                <a href="/partners"
                                    class="text-slate-300 hover:text-primary transition-colors duration-300">
                                     Partners
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.pineydata.com/faq"
+                                <a href="/faq"
                                    class="text-slate-300 hover:text-primary transition-colors duration-300">
                                     FAQ
                                 </a>
@@ -383,6 +393,40 @@
         </footer>
 
         <!-- Core theme JS-->
-        <script src="https://www.pineydata.com/theme/js/scripts.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Mobile menu toggle
+                const menuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuIcon = menuButton.querySelector('.menu-icon');
+                const closeIcon = menuButton.querySelector('.close-icon');
+
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const isClickInside = menuButton.contains(event.target) || mobileMenu.contains(event.target);
+
+                    if (!isClickInside && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
+
+                // Close mobile menu when window is resized to desktop size
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

@@ -98,19 +98,29 @@
                         <a href="{{ SITEURL }}/faq" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">FAQ</a>
                         <a href="{{ SITEURL }}/contact" class="text-gray-600 hover:text-primary transition-colors duration-300 font-medium">Contact</a>
                     </div>
-                    <a href="https://calendly.com/pineydata/" target="_blank" rel="noopener noreferrer"
-                       class="hidden md:block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        Book a Free Consult
-                    </a>
+                    <div class="flex items-center space-x-4">
+                        <a href="https://calendly.com/pineydata/" target="_blank" rel="noopener noreferrer"
+                           class="hidden md:block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Book a Free Consult
+                        </a>
+                        <button class="md:hidden text-gray-600 hover:text-primary transition-colors duration-300" id="mobile-menu-button" aria-label="Menu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                <path class="close-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
             <!-- Mobile menu -->
-            <div class="md:hidden hidden bg-white border-t border-slate-100" id="mobile-menu">
-                <a class="block py-3 px-4 text-sm hover:bg-slate-50 transition-colors duration-200" href="{{ SITEURL }}/about">About</a>
-                <a class="block py-3 px-4 text-sm hover:bg-slate-50 transition-colors duration-200" href="{{ SITEURL }}/partners">Partners</a>
-                <a class="block py-3 px-4 text-sm hover:bg-slate-50 transition-colors duration-200" href="{{ SITEURL }}/faq">FAQ</a>
-                <a class="block py-3 px-4 text-sm hover:bg-slate-50 transition-colors duration-200" href="{{ SITEURL }}/contact">Contact</a>
-                <a class="block py-3 px-4 text-sm bg-primary text-white font-medium" href="https://calendly.com/pineydata/">Get Started</a>
+            <div class="hidden bg-white border-t border-slate-100" id="mobile-menu">
+                <div class="container mx-auto px-4 py-2 space-y-1">
+                    <a class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 rounded-lg" href="{{ SITEURL }}/about">About</a>
+                    <a class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 rounded-lg" href="{{ SITEURL }}/partners">Partners</a>
+                    <a class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 rounded-lg" href="{{ SITEURL }}/faq">FAQ</a>
+                    <a class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 rounded-lg" href="{{ SITEURL }}/contact">Contact</a>
+                    <a class="block py-3 px-4 text-white bg-primary hover:bg-primary/90 transition-colors duration-200 rounded-lg text-center mt-4" href="https://calendly.com/pineydata/">Book a Free Consult</a>
+                </div>
             </div>
         </nav>
 
@@ -192,6 +202,40 @@
         </footer>
 
         <!-- Core theme JS-->
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/scripts.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Mobile menu toggle
+                const menuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuIcon = menuButton.querySelector('.menu-icon');
+                const closeIcon = menuButton.querySelector('.close-icon');
+
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const isClickInside = menuButton.contains(event.target) || mobileMenu.contains(event.target);
+
+                    if (!isClickInside && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
+
+                // Close mobile menu when window is resized to desktop size
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
